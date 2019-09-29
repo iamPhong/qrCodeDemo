@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row text-center">
+    <% if !@error.nil? %>
+      <h2 class="text-danger"><strong><%= @error %></strong></h2>
+    <% end %>
+    <% if !@success.nil? %>
+      <h2 class="text-success"><strong><%= @success %></strong></h2>
+    <% end %>
+  </div>
+</div>

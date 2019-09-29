@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <% if !@my_wallet.present? %>
+        <div class="jumbotron">
+          <h1>My Wallet is blank</h1>
+          <p>
+            <%= link_to "New Wallet", new_user_wallet_path(current_user.id),
+              class: "btn btn-primary btn-lg", role: "button" %>
+          </p>
+        </div>
+      <% else %>
+        <h1>
+          <strong class="text-success">
+            <%= @my_wallet.card_name %>
+          </strong>
+        <h1>
+        <p>
+          <strong>Cash: </strong>
+          <%= @my_wallet.cash %>
+        </p>
+        <p>
+          <strong>Card Number: </strong>
+          <%= @my_wallet.card_number %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

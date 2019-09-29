@@ -1,0 +1,54 @@
+<div class="row">
+  <% @items.each do |item| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= image_tag item.image, alt: item.name, style: "width: 300px; height: 300px" %>
+        <div class="caption">
+          <h3>
+            <%= item.name %>
+            <span class="badge"><%= item.amount %></span>
+          </h3>
+          <p><%= item.infor %></p>
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter<%= item.id %>">
+              Mua
+            </button>
+            <a href="#" class="btn btn-default" role="button">Chi tiết</a>
+          </p>
+          <div class="modal fade" id="exampleModalCenter<%= item.id %>"
+            tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-center text-uppercase"
+                    id="exampleModalLongTitle">
+                    CHI TIẾT ĐƠN HÀNG
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <%= form_with url: item_payments_path(item.id), local: true do |form| %>
+                  <div class="modal-body">
+                    <label>Số lượng</label>
+                    <%= form.text_field :amount, class: "form-control" %>
+                  </div>
+                  <div class="modal-footer">
+                    <%= form.submit "QRCode Payment", class: "btn btn-primary",
+                      name: "commit", value: "qrcodepay" %>
+                    <%= form.submit "Normal Payment", class: "btn btn-success",
+                      name: "commit", value: "normalpay" %>
+                    <button type="button" class="btn btn-secondary"
+                      data-dismiss="modal">
+                      Close
+                    </button>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

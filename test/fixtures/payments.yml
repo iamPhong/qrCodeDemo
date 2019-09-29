@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: one
+  status: MyString
+  type_payment: MyString
+  status: MyString
+
+two:
+  item: two
+  status: MyString
+  type_payment: MyString
+  status: MyString
