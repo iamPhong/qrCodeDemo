@@ -40,11 +40,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    angular-rails-templates (1.0.2)
-      railties (>= 4.2, < 6)
-      sprockets (>= 3.0, < 5)
-      tilt
-    angularjs-rails (1.6.8)
     arel (8.0.0)
     autoprefixer-rails (9.6.1.1)
       execjs
@@ -75,7 +70,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
-    crass (1.0.4)
+    crass (1.0.5)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -100,7 +95,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.2.3)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -111,7 +106,7 @@ GEM
     minitest (5.12.1)
     mysql2 (0.5.2)
     nio4r (2.5.2)
-    nokogiri (1.10.4)
+    nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pry (0.12.2)
@@ -215,8 +210,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angular-rails-templates
-  angularjs-rails
   bootstrap-sass
   byebug
   capybara (>= 2.15)
